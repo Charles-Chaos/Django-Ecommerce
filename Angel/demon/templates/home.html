@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1>SHOPPIE</h1>
+    <div class="row">
+        {% for demon in demon %}
+            <div class="col">
+            <div class="card" style="width: 18rem; border: none;">
+                <img class="card-img-top" src="{{ demon.image }}" alt="Card image cap" style="height: 20rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{ demon.name}}</h5>
+                    <p class="card-text">${{ demon.price}}</p>
+                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+            </div> 
+        {% endfor %}
+{% endblock content %}
