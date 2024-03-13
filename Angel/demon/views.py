@@ -3,6 +3,6 @@ from django.http import HttpResponse
 from .models import Coffee
 
 
-def home(request):
+def index(request):
     demon =    Coffee.objects.all()
-    return render(request, 'home.html', {'demon': demon})
+    return render(request, 'index.html', {'demon': demon})
